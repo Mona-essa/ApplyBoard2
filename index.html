@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ApplyBoard</title>
+        <link rel="stylesheet" href="css/all.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css.map"/>
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!--END FONTS-->
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        
+
+    </head>
+
+    <body>
+        <!--START NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">ApplyBoard</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Students</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Recruitment Partners</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Schools</a>
+                  </li>
+                 
+                </ul>
+
+                
+                <div class="dropdown-bars">
+                  <button onclick="myFunction()" class="dropbtn"><span><i class="fa-solid fa-bars dropbars"></i></span></button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Our Solutions</a>
+                    <a href="#">Our Story</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Life</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Blog</a>
+                  </div>
+                </div>     
+                   
+                <div class="login-reg">
+                  <button class="log-btn">Login</button>
+                  <button class="reg-btn">Register</button>
+                 </div>
+                </div>
+                 
+               
+             
+            </div>
+          </nav>
+
+        <!------------------------------------------------------------------------------>
+
+        <!--SEARCH SECTION-->
+        <div class="search-section">
+          <div class="container">
+            <form class="d-flex">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="form-control me-2 search-input" type="search" placeholder="       Search for programs, schools, or other Keywords" aria-label="Search">
+                <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+
+        <!-------------------------------------------------------------------->
+
+        <!--START FILTER SECTION-->
+        <div class="filter-section">
+          <div class="container d-flex row " >
+
+           <!--Location Filter-->
+           <div class="location-filter col-lg-2">
+           
+
+           <div class="dropdown" data-control="checkbox-dropdown" >
+             <label class="dropdown-label">Location</label>
+             
+             <div class="dropdown-list">
+    
+               <div>
+               <label class="dropdown-option" id="chekBoxLable" onclick="toggle()">
+                 <input type="checkbox" name="dropdown-group" value="Selection 1"  />
+                 Selection One
+                  </label>
+
+           <!--sub dropdown-->
+                  <div class="subdropdown-list" id="subDropDownList" >
+                     <label class="subdropdown-option">
+                      <input type="checkbox" name="dropdown-group" value="Selection 1" />
+                    1
+                    </label>
+                    
+                    <label class="subdropdown-option">
+                      <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                      2
+                    </label>
+                    
+                    <label class="subdropdown-option">
+                      <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                      3
+                    </label>
+                    
+                    <label class="subdropdown-option">
+                      <input type="checkbox" name="dropdown-group" value="Selection 4" />
+                     4
+                    </label>
+                    
+                    <label class="subdropdown-option">
+                      <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                      5
+                    </label>      
+                  </div>
+                  <!------------------------------------------------------------------------------->
+                  </div>
+
+               
+               <label class="dropdown-option">
+                 <input type="checkbox" name="dropdown-group" value="Selection 2" />
+                 Selection Two
+               </label>
+               
+               <label class="dropdown-option">
+                 <input type="checkbox" name="dropdown-group" value="Selection 3" />
+                 Selection Three
+               </label>
+               
+               <label class="dropdown-option">
+                 <input type="checkbox" name="dropdown-group" value="Selection 4" />
+                 Selection Four
+               </label>
+               
+               <label class="dropdown-option">
+                 <input type="checkbox" name="dropdown-group" value="Selection 5" />
+                 Selection Five
+               </label>      
+             </div>
+           </div>
+           </div>
+           </div>
+         <!--  <div class="location-filter col-lg-2 ">
+              <div class="form-group">
+                <div id="locationSelect" class="myLocationselect">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
+                    <select class="form-select">
+                      <option>Location</option>
+                    </select>
+                    <div class="overSelectLocation"></div>
+                  </div>
+                  <div id="mySelectLocation">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="one" /> location 1</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="two" /> location 2</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="three" /> location 3</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="four" /> location 4</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="five" /> location 5</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="six" />location 6</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="seven" /> location 7</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="eight" /> location 8</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="nine" /> location 9</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="ten" /> location 10</label>
+                  </div>
+                </div>
+              </div>
+             </div>  
+
+             <!--PROGRAM FILTER-->
+
+        <!--     <div class="program-filter col-lg-2">
+              <div class="form-group">
+                <div id="programSelect" class="mySelectProgram">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxAreaProgram()">
+                    <select class="form-select">
+                      <option>Program level</option>
+                    </select>
+                    <div class="overSelectProgram"></div>
+                  </div>
+                  <div id="mySelectProgram">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="one" /> First checkbox</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="two" /> Second checkbox</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="three" /> Third checkbox</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="four" /> Third checkbox</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="five" /> First checkbox</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="six" /> Second checkbox</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="seven" /> Third checkbox</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="eight" /> First checkbox</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="nine" /> Second checkbox</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="ten" /> Third checkbox</label>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+             <!--DISCIPLINE FILTER-->
+
+         <!--  <div class="discipline-filter col-lg-2">
+              <div class="form-group">
+                <div id="disciplineSelect" class="mySelectDiscipline">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxAreaDiscipline()">
+                    <select class="form-select">
+                      <option>Discipline</option>
+                    </select>
+                    <div class="overSelectDiscipline"></div>
+                  </div>
+                  <div id="mySelectDiscipline">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="one" /> First checkbox</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="two" /> Second checkbox</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="three" /> Third checkbox</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="four" /> Third checkbox</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="five" /> First checkbox</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="six" /> Second checkbox</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="seven" /> Third checkbox</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="eight" /> First checkbox</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="nine" /> Second checkbox</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="ten" /> Third checkbox</label>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+             <!--TUITION FILTER-->
+          <!--   <div class="tuition-filter col-lg-2">
+              <div class="form-group">
+                <div id="tuitionSelect" class="mySelectTuition">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxAreaTuition()">
+                    <select class="form-select">
+                      <option>Tuition fee (USD)</option>
+                    </select>
+                    <div class="overSelectTuition"></div>
+                  </div>
+                  <div id="mySelectTuition">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="one" /> First checkbox</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="two" /> Second checkbox</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="three" /> Third checkbox</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="four" /> Third checkbox</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="five" /> First checkbox</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="six" /> Second checkbox</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="seven" /> Third checkbox</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="eight" /> First checkbox</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="nine" /> Second checkbox</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="ten" /> Third checkbox</label>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+             INTAKES FILTER-->
+          <!--   <div class="intakes-filter col-lg-2">
+              <div class="form-group">
+                <div id="intakesSelect" class="mySelectIntakes">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxAreaIntakes()">
+                    <select class="form-select">
+                      <option>Intakes</option>
+                    </select>
+                    <div class="overSelectIntakes"></div>
+                  </div>
+                  <div id="mySelectIntakes">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="one" /> First checkbox</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="two" /> Second checkbox</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="three" /> Third checkbox</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="four" /> Third checkbox</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="five" /> First checkbox</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="six" /> Second checkbox</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="seven" /> Third checkbox</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="eight" /> First checkbox</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="nine" /> Second checkbox</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="ten" /> Third checkbox</label>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+             <!--DURATION-->
+        <!--     <div class="duration-filter col-lg-2">
+              <div class="form-group">
+                <div id="durationSelect" class="mySelectDuration">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxAreaDuration()">
+                    <select class="form-select">
+                      <option>Duration</option>
+                    </select>
+                    <div class="overSelectDuration"></div>
+                  </div>
+                  <div id="mySelectDuration">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="one" /> First checkbox</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="two" /> Second checkbox</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="three" /> Third checkbox</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="four" /> Third checkbox</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="five" /> First checkbox</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="six" /> Second checkbox</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="seven" /> Third checkbox</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="eight" /> First checkbox</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="nine" /> Second checkbox</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="ten" /> Third checkbox</label>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+      <div id="filterSecAll"></div>
+          </div>
+        </div>  
+          
+
+       <!--END FILTER SECTION-->
+
+       <div class="main-section">
+        <div class="container-fluid row">
+          <div class="programs col-lg-4">
+            <h5 class="mb-3">10,000 programs</h5>
+
+            <div class="prog-item">
+               <div class="prog-title d-flex">
+                <div class="img-sec">
+                <img src="/images/work-06.jpg" alt="collage-img"/>
+                </div>
+                <p>International Language Academy of Canada (ILAC) - Toronto</p>
+               </div>
+              <h5 class="mt-2"> <a href="#">ILAC KISS</a></h5>
+              <div class="prog-info d-flex">
+                <div class="lang-info">
+                  <p>English as Second Language</p>
+                </div>
+
+                <div class="month-info">
+                  <p>1 - 8 months</p>
+                </div>
+                
+              </div>
+              <div class="price-info">
+                <h5>$ 3,456 USD / Year</h5>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="program-details col-lg-8">
+            <div class="prog-img">
+              <img src="/images/International-Language-Academy-of-Canada-ILAC-Toronto-Foyer-July2020.webp"/>
+            </div>
+               <div class="container">
+            <div class="prog-title">
+              <div class="img-sec d-flex">
+              <img src="/images/work-06.jpg" alt="collage-img"/>
+              <h5 class="program-details-name"><a href="#">International Language Academy of Canada (ILAC) - Toronto</a></h5>
+              </div>
+              <div class="prog-loca">
+              <p><i class="fa-solid fa-location-dot"></i>Toronto,Ontario,CA</p>
+              </div>
+              <h3><a href="#">ILAC kISS</a></h3>
+              <button class="check-btn">check Eligibility Now</button>
+             </div>
+             <div class="prog-summary">
+              <h5>Program Summary</h5>
+              <p>Study English Online with ILAC KISS - Live from Toronto & Vancouver, Canada
+
+                Students can study English online at one of the most awarded language schools in the <span id="dots">....</span>
+              <span id="more">world.
+
+                <br/><br/><span class="prog-sum-1"> Flexible Schedules</span><br/>
+                
+                Online English classes tailored for every time zone, everywhere. Learn in the comfort of your own home.
+                
+              <br/> <br/><span  class="prog-sum-1"> Award Winning</span><br/>
+                
+                Every year ILAC wins awards from around the world that recognize our commitment to excellence.
+                
+              <br/> <br/> <span  class="prog-sum-1">Diversity</span><br/>
+                
+                ILAC is one of the most diverse language schools in the world. Students come from over 90 countries.</span></p>
+                <button onclick="moreFunction()" id="moreBtn">Show More</button>
+             </div>
+                  </div>
+                  
+                  <div class="container">
+                  <div class="prog-details-info">
+                    <div class="row ">
+                      <div class="col-lg-6 item1">
+                        <img src="/images/image(1).svg"/>
+                        <p>English as Second Language (ESL)
+                        <br/>  <span>Program Level</span>
+                        </p><br>
+                        
+                      </div>
+                      <div class="col-lg-6 item1">
+                        <img src="/images/calender.svg"/>
+                        <p>English as Second Language (ESL)
+                          <br/>  <span>Program Level</span>
+                        </p>
+                        
+                      </div>
+                      <div class="col-lg-6 item1">
+                        <img src="/images/money.svg"/>
+                        <p>English as Second Language (ESL)
+                          <br/> <span>Program Level</span>
+                        </p><br>
+                        
+                      </div>
+
+                      <div class="col-lg-6 item1">
+                        <img src="/images/fees.svg"/>
+                        <p>English as Second Language (ESL)
+                          <br/> <span>Program Level</span>
+                        </p><br>
+                        
+                      </div>
+                      <div class="col-lg-6 item1">
+                        <img src="/images/cost.svg"/>
+                        <p>English as Second Language (ESL)
+                          <br/> <span>Program Level</span>
+                        </p><br>
+                        
+                      </div>
+                    </div>
+
+                    </div>
+                  </div>
+                  <div class="container">
+                    <h5 class="mb-4">Admission Requirements</h5>
+                    <p>Academic Background</p>
+                    <button class="log-req-btn"><a href="#">Log to View All Requirements</a></button>
+                  </div>
+
+          </div>
+          
+        </div>
+       </div>
+       
+       <div class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6 add-sec">
+              <div class="logo-footer">
+                <a href="#"><img src="/images/logo.svg"/></a>
+              </div>
+              <h4><a href="#">101 Frederick St,<br/><br/> Kitchener, ON <br/><br/>N2H 6R3</a></h4>
+              <div class="social">
+                <h4>Get Social</h4>
+                
+                  <ul class="d-flex">
+              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></li></a>  
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></li></a>  
+               <li><a href="#"><i class="fa-brands fa-instagram"></i></li></a> 
+               <li> <a href="#"><i class="fa-solid fa-x"></i></li></a>
+               <li><a href="#"><i class="fa-brands fa-youtube"></i></li> </a>
+                </ul>
+                
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 stu-sec">
+              <ul>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Schools</a></li>
+                <li><a href="#">Recruiters</a></li>
+                <li><a href="#">Discover</a></li>
+                <li class="stu-list-item"><a href="#">Discover Programs</a></li>
+                <li class="stu-list-item"><a href="#">Discover Schools</a></li>
+                <li class="stu-list-item"><a href="#">Register</a></li>
+
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6 about-sec">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Life</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6 Resources-sec">
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="#">Our Solutions</a></li>
+                <li><a href="#">UK Resources</a></li>
+                <li><a href="#">AU Resources</a></li>
+              </ul>
+              <h5>Legal</h5>
+              <ul>
+              <li><a href="#">Privacy & Cookies Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">ApplyBoard Fees</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <p>&#169; 2015-2024 ApplyBoard Inc.</p>
+        </div>
+
+        </div>
+       </div>
+
+       
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script src="js/script.js"></script>
+       
+       
+       
+    </body>
+</html>
